@@ -22,7 +22,7 @@
                             <!-- /.card-header -->
                             <!-- form start -->
                             <form role="form" method="post" action="{{ route('products.store') }}"
-                                  id="quickForm">
+                                  id="quickForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                     <div class="card-footer">
@@ -44,7 +44,8 @@
                                         </div>
                                         <div class="col-md-4 form-group">
                                             <label for="product_category">Product Category</label>
-                                            <select name="product_category" class="form-control" id="product_category" required>
+                                            <select name="product_category" class="form-control" id="product_category"
+                                                    required>
                                                 @foreach($categories as $category)
                                                     <option
                                                         value="{{$category->id}}">{{$category->category_name}}</option>
@@ -56,6 +57,12 @@
                                             <textarea name="description" class="form-control" id="description">Enter Product description</textarea>
                                         </div>
 
+                                        <div class="col-md-4 form-group">
+                                            <label for="image">Product Image</label>
+                                            <input type="file" name="image" class="form-control"
+                                                   id="image"
+                                                   required>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->

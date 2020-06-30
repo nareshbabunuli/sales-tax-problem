@@ -39,20 +39,6 @@
                                                    value="{{$product_category->category_name}}"
                                                    placeholder="Enter Category Name">
                                         </div>
-                                        <div class="col-md-3 form-group">
-                                            <label for="enable_sales_tax">Enable Sales Tax</label>
-                                            <select name="enable_sales_tax" class="form-control"
-                                                    id="enable_sales_tax">
-                                                <option disabled hidden>Select</option>
-                                                @if($product_category->enable_sales_tax === '1')
-                                                    <option value="1" selected>Enable</option>
-                                                    <option value="0">Disable</option>
-                                                @else
-                                                    <option value="1">Enable</option>
-                                                    <option value="0" selected>Disable</option>
-                                                @endif
-                                            </select>
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
